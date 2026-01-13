@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PureDrop Oils</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>PureDrop Oils</h1>
+    <p>Pure • Natural • Healthy</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Our Oils</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>100% Pure & Natural Food Oils</h2>
+    <p>Cold pressed oils made with traditional methods</p>
+</section>
+
+<section>
+    <h2>Our Oils</h2>
+        <div class="products">
+    <div class="card">🌰 Groundnut Oil</div>
+    <div class="card">🌻 Sunflower Oil</div>
+    <div class="card">🥥 Coconut Oil</div>
+    <div class="card">🌿 Mustard Oil</div>
+    <div class="card">🌱 Sesame Oil</div>
+</div>
+
+    
+</section>
+
+<section>
+    <h2>Why Choose Us?</h2>
+    <p>
+        ✔ Cold Pressed <br>
+        ✔ No Chemicals <br>
+        ✔ Traditional Extraction <br>
+        ✔ Healthy for Daily Cooking
+    </p>
+<section class="contact">
+    <h2>Contact Us</h2>
+
+    <p>📞 Phone: 8073963466</p>
+    <p>📍 Location: karnataka, India</p>
+    <p>📲 WhatsApp Orders Available</p>
+
+    <!-- CONTACT FORM START -->
+    <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <button type="submit">Send on WhatsApp</button>
+</form>
+
+    <!-- CONTACT FORM END -->
+
+</section>
+
+
+
+<footer>
+    <p>© 2026 PureDrop Oils</p>
+</footer>
+
+<a href="https://wa.me/8073963466" class="whatsapp">
+    Order on WhatsApp
+</a>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+function sendWhatsApp() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+
+    var whatsappMessage =
+        "Hello, I want to order food oil.%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Message: " + message;
+
+    var whatsappURL =
+        "https://wa.me/91XXXXXXXXXX?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
+
+
+
+
+</body>
+</html>
