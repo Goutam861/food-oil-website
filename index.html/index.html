@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PureDrop Oils</title>
+    <title>PureDrop Edible Oils</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>PureDrop Oils</h1>
+    <h1>PureDrop Edible Oils</h1>
     <p>Pure • Natural • Healthy</p>
 </header>
 
@@ -25,55 +26,29 @@
 
 <section>
     <h2>Our Oils</h2>
-        <div class="products">
-    <div class="card">🌰 Groundnut Oil</div>
-    <div class="card">🌻 Sunflower Oil</div>
-    <div class="card">🥥 Coconut Oil</div>
-    <div class="card">🌿 Mustard Oil</div>
-    <div class="card">🌱 Sesame Oil</div>
-</div>
-
-    
+    <div class="products">
+        <div class="card">🌰 Groundnut Oil</div>
+        <div class="card">🌻 Sunflower Oil</div>
+        <div class="card">🥥 Coconut Oil</div>
+        <div class="card">🌿 Mustard Oil</div>
+        <div class="card">🌱 Sesame Oil</div>
+    </div>
 </section>
 
-<section>
-    <h2>Why Choose Us?</h2>
-    <p>
-        ✔ Cold Pressed <br>
-        ✔ No Chemicals <br>
-        ✔ Traditional Extraction <br>
-        ✔ Healthy for Daily Cooking
-    </p>
 <section class="contact">
     <h2>Contact Us</h2>
-
     <p>📞 Phone: 8073963466</p>
-    <p>📍 Location: karnataka, India</p>
-    <p>📲 WhatsApp Orders Available</p>
+    <p>📍 Location: Your City, India</p>
 
-    <!-- CONTACT FORM START -->
     <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="tel" id="phone" placeholder="Phone Number" required>
-    <textarea id="message" placeholder="Your Message"></textarea>
-    <button type="submit">Send on WhatsApp</button>
-</form>
-
-    <!-- CONTACT FORM END -->
-
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send on WhatsApp</button>
+    </form>
 </section>
 
-
-
-<footer>
-    <p>© 2026 PureDrop Oils</p>
-</footer>
-
-<a href="https://wa.me/8073963466" class="whatsapp">
-    Order on WhatsApp
-</a>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="#" class="whatsapp">Order on WhatsApp</a>
 
 <script>
 function sendWhatsApp() {
@@ -81,21 +56,17 @@ function sendWhatsApp() {
     var phone = document.getElementById("phone").value;
     var message = document.getElementById("message").value;
 
-    var whatsappMessage =
-        "Hello, I want to order food oil.%0A" +
-        "Name: " + name + "%0A" +
-        "Phone: " + phone + "%0A" +
+    var text =
+        "Hello, I want to order food oil.\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
         "Message: " + message;
 
-    var whatsappURL =
-        "https://wa.me/8073963466 text=" + whatsappMessage;
-
-    window.open(whatsappURL, "_blank");
+    var url = "https://wa.me/8073963466text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
 }
 </script>
 
-
-
-
 </body>
 </html>
+
